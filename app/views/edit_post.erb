@@ -1,0 +1,23 @@
+<h2>Edit Something on WitchList!</h2>
+<ul class="new-post">
+<form name="new_post" action="/edit" method="post">
+  <input type="hidden" name="key" value="<%= @post.key %>">
+  <li>Category: <select name="category_id"></li>
+    <% Category.all.each do |category| %>
+      <option value="<%= category.id %>" <%= "selected" if @post.category_id == category.id %>><%= category.name %></option>
+    <% end %>
+  </select>
+  <li>Name: <input type="text" name="author" value="<%= @post.author %>"></li>
+  <li>Email: <input type="text" name="email" value="<%= @post.email %>"></li>
+  <li>Price: <input type="text" name="price" value="<%= @post.price.to_s %>"></li>
+  <li>Description: <textarea rows="10" cols="50" name="content"><%= @post.content %></textarea></li>
+
+  <input type="submit" value="Edit">
+</form>
+<br />
+<form action="/delete" method="post">
+    <input type="submit" value="Delete this post">
+    <input type="hidden" name="key" value="<%= @post.key %>">
+</form>
+
+</ul>

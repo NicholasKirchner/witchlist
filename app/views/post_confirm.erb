@@ -1,0 +1,13 @@
+<h2>You did it</h2>
+
+<h3>Your submission:</h3>
+
+<div class="post-content"><li><%= params["content"] %></li></div>
+<li>Price: <%= params["price"] %> Gold</li>
+<li>Posted By: <a href="mailto:<%= params["email"] %>"><%= params["author"] %></a></li>
+
+
+<p>IF YOU EVER WANT TO EDIT THIS SUBMISSION</p>
+<p>(or delete it)</p>
+<p>Save this URL: <a href="http://localhost:9393/post/edit?key=<%= params["key"] %>">
+  http://localhost:9393/post/edit?key=<%= params["key"]%></a></p>

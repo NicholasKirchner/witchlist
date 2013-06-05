@@ -1,0 +1,38 @@
+.container {
+  margin: 20px auto;
+  width: 600px;
+  padding: 0px 20px 20px 20px;
+}
+
+.categories ul {
+  list-style-type: NONE;
+  padding: 0;
+}
+
+.categories li {
+  padding-bottom: 20px;
+}
+
+.posts ul {
+  list-style-type: NONE;
+  padding: 0;
+}
+
+.post-content {
+  padding-bottom: 5px;
+}
+
+h1 a {
+  text-decoration: none;
+  color: black;
+}
+
+.new-post {
+  list-style-type: NONE;
+  padding: 0;
+
+}
+
+.new-post li {
+  padding-bottom: 10px;
+}

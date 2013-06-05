@@ -1,0 +1,16 @@
+<h2>Post Something on WitchList!</h2>
+<ul class="new-post">
+<form name="new_post" action="/" method="post">
+  <li>Category: <select name="category_id"></li>
+    <% Category.all.each do |category| %>
+      <option value="<%= category.id %>"><%= category.name %></option>
+    <% end %>
+  </select>
+  <li>Name: <input type="text" name="author"></li>
+  <li>Email: <input type="text" name="email"></li>
+  <li>Price: <input type="text" name="price"></li>
+  <li>Description: <textarea rows="10" cols="50" name="content"></textarea></li>
+
+  <input type="submit" value="Post">
+</form>
+</ul>
